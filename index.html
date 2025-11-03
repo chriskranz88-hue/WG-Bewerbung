@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mieterselbstauskunft - WG-Zimmer Engadinerstr. 36</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: #8b0000;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .form-content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 22px;
+            color: #8b0000;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #8b0000;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .required {
+            color: #dc3545;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .radio-label,
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 8px;
+            cursor: pointer;
+        }
+        
+        .conditional-field {
+            margin-left: 30px;
+            margin-top: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        .conditional-field.show {
+            display: block;
+        }
+        
+        .file-upload {
+            padding: 20px;
+            border: 2px dashed #ddd;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .file-upload:hover {
+            border-color: #667eea;
+            background: #f8f9fa;
+        }
+        
+        .file-upload input[type="file"] {
+            display: none;
+        }
+        
+        .consent-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #8b0000;
+        }
+        
+        .consent-box p {
+            margin-bottom: 10px;
+            font-size: 13px;
+            color: #555;
+        }
+        
+        .schufa-text {
+            max-height: 200px;
+            overflow-y: auto;
+            padding: 15px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+        
+        .submit-btn {
+            background: #8b0000;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background: #660000;
+        }
+        
+        .info-box {
+            background: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        
+        @media (max-width: 600px) {
+            .form-content {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏠 Mieterselbstauskunft</h1>
+            <p>WG-Zimmer Engadinerstr. 36, München</p>
+        </div>
+        
+        <div class="form-content">
+            <div class="info-box">
+                <strong>ℹ️ Hinweis:</strong> Vielen Dank für Ihr Interesse! Bitte füllen Sie diese Selbstauskunft vollständig aus. 
+                Die Angaben sind freiwillig, jedoch ist uns die vollständige und wahrheitsgemäße Beantwortung wichtig für unsere Entscheidung.
+                <br><br>
+                <strong>Kontakt:</strong> service@thasos.de
+            </div>
+            
+            <form id="mieterForm" action="https://formsubmit.co/service@thasos.de" method="POST" enctype="multipart/form-data">
+                
+                <!-- ABSCHNITT 1: Objektdaten -->
+                <div class="section">
+                    <h2 class="section-title">📋 Objektdaten</h2>
+                    
+                    <div class="form-group">
+                        <label>Interessiert an Objekt: <span class="required">*</span></label>
+                        <input type="text" name="objekt" value="Engadinerstr. 36, München" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Gewünschtes Einzugsdatum: <span class="required">*</span></label>
+                        <input type="date" name="einzugsdatum" required>
+                    </div>
+                </div>
+                
+                <!-- ABSCHNITT 2: Persönliche Daten -->
+                <div class="section">
+                    <h2 class="section-title">👤 Persönliche Daten</h2>
+                    
+                    <div class="form-group">
+                        <label>Name, Vorname (ggf. Geburtsname): <span class="required">*</span></label>
+                        <input type="text" name="name" placeholder="Mustermann, Max" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Familienstand: <span class="required">*</span></label>
+                        <select name="familienstand" required>
+                            <option value="">Bitte wählen...</option>
+                            <option value="ledig">Ledig</option>
+                            <option value="verheiratet">Verheiratet</option>
+                            <option value="geschieden">Geschieden</option>
+                            <option value="verwitwet">Verwitwet</option>
+                            <option value="partnerschaft">In Partnerschaft</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Geburtsdatum: <span class="required">*</span></label>
+                        <input type="date" name="geburtsdatum" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Geburtsort: <span class="required">*</span></label>
+                        <input type="text" name="geburtsort" placeholder="München" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Aktuelle Anschrift (Straße, PLZ, Ort): <span class="required">*</span></label>
+                        <textarea name="aktuelle_anschrift" placeholder="Musterstraße 123&#10;80331 München" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Telefonnummer / Mobil: <span class="required">*</span></label>
+                        <input type="tel" name="telefon" placeholder="+49 176 12345678" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>E-Mail-Adresse: <span class="required">*</span></label>
+                        <input type="email" name="email" placeholder="max.mustermann@example.com" required>
+                    </div>
+                </div>
+                
+                <!-- ABSCHNITT 3: Berufliche Informationen -->
+                <div class="section">
+                    <h2 class="section-title">💼 Berufliche Informationen</h2>
+                    
+                    <div class="form-group">
+                        <label>Ausgeübter Beruf: <span class="required">*</span></label>
+                        <input type="text" name="beruf" placeholder="z.B. Softwareentwickler" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Monatliches Nettoeinkommen (in Euro): <span class="required">*</span></label>
+                        <input type="number" name="nettoeinkommen" placeholder="2500" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Derzeitiger Arbeitgeber (Name und Anschrift): <span class="required">*</span></label>
+                        <textarea name="arbeitgeber" placeholder="Firma GmbH&#10;Musterstraße 1&#10;80331 München" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Seit wann sind Sie dort beschäftigt?: <span class="required">*</span></label>
+                        <input type="text" name="beschaeftigt_seit" placeholder="z.B. 01.2023 oder seit 2 Jahren" required>
+                    </div>
+                </div>
+                
+                <!-- ABSCHNITT 4: Aktuelles Mietverhältnis -->
+                <div class="section">
+                    <h2 class="section-title">🏘️ Aktuelles Mietverhältnis</h2>
+                    
+                    <div class="form-group">
+                        <label>Derzeitiger Vermieter (Name, Anschrift, Telefon): <span class="required">*</span></label>
+                        <textarea name="vermieter" placeholder="Name des Vermieters&#10;Adresse&#10;Telefonnummer" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Grund für den Wohnungswechsel: <span class="required">*</span></label>
+                        <textarea name="wechselgrund" placeholder="z.B. Berufliche Veränderung, näher zur Arbeit, etc." required></textarea>
+                    </div>
+                </div>
+                
+                <!-- ABSCHNITT 5: Weitere Personen -->
+                <div class="section">
+                    <h2 class="section-title">👥 Weitere Mitbewohner</h2>
+                    
+                    <div class="form-group">
+                        <label>Sollen außer Ihnen noch weitere Personen das Zimmer beziehen? <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="weitere_personen" value="nein" checked onchange="toggleConditional('weitere_personen_details', false)"> Nein
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="weitere_personen" value="ja" onchange="toggleConditional('weitere_personen_details', true)"> Ja
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div id="weitere_personen_details" class="conditional-field">
+                        <label>Details zu weiteren Personen (Name, Anschrift, Geburtsdatum, Verwandtschaftsverhältnis):</label>
+                        <textarea name="weitere_personen_info" placeholder="Max Mustermann&#10;Musterstraße 123, München&#10;01.01.1995&#10;Partner/in"></textarea>
+                    </div>
+                </div>
+                
+                <!-- ABSCHNITT 6: Wichtige Fragen -->
+                <div class="section">
+                    <h2 class="section-title">❓ Wichtige Fragen</h2>
+                    
+                    <div class="form-group">
+                        <label>Bestehen Mietrückstände aus bisherigen Mietverhältnissen? <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="mietrueckstaende" value="nein" checked required> Nein
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="mietrueckstaende" value="ja"> Ja
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Wurde in den letzten 5 Jahren eine Räumungsklage gegen Sie erhoben? <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="raeumungsklage" value="nein" checked onchange="toggleConditional('raeumungsklage_details', false)" required> Nein
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="raeumungsklage" value="ja" onchange="toggleConditional('raeumungsklage_details', true)"> Ja
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div id="raeumungsklage_details" class="conditional-field">
+                        <label>Falls ja, wann?</label>
+                        <input type="text" name="raeumungsklage_wann">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Wurde in den letzten 5 Jahren Zwangsvollstreckung gegen Sie eingeleitet? (Im Zusammenhang mit Mietverhältnissen) <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="zwangsvollstreckung" value="nein" checked onchange="toggleConditional('zwangsvollstreckung_details', false)" required> Nein
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="zwangsvollstreckung" value="ja" onchange="toggleConditional('zwangsvollstreckung_details', true)"> Ja
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div id="zwangsvollstreckung_details" class="conditional-field">
+                        <label>Falls ja, wann?</label>
+                        <input type="text" name="zwangsvollstreckung_wann">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Haben Sie in den letzten 5 Jahren eine eidesstattliche Versicherung abgegeben? <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="eidesstattlich" value="nein" checked onchange="toggleConditional('eidesstattlich_details', false)" required> Nein
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="eidesstattlich" value="ja" onchange="toggleConditional('eidesstattlich_details', true)"> Ja
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div id="eidesstattlich_details" class="conditional-field">
+                        <label>Falls ja, wann?</label>
+                        <input type="text" name="eidesstattlich_wann">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Wurde in den letzten 5 Jahren ein Insolvenzverfahren gegen Sie eröffnet? <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="insolvenz" value="nein" checked onchange="toggleConditional('insolvenz_details', false)" required> Nein
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="insolvenz" value="ja" onchange="toggleConditional('insolvenz_details', true)"> Ja
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div id="insolvenz_details" class="conditional-field">
+                        <label>Falls ja, wann?</label>
+                        <input type="text" name="insolvenz_wann">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Gibt es Vorstrafen oder einen Haftbefehl gegen Sie? (Im Zusammenhang mit Mietverhältnissen) <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="vorstrafen" value="nein" checked onchange="toggleConditional('vorstrafen_details', false)" required> Nein
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="vorstrafen" value="ja" onchange="toggleConditional('vorstrafen_details', true)"> Ja
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div id="vorstrafen_details" class="conditional-field">
+                        <label>Falls ja, Details:</label>
+                        <textarea name="vorstrafen_info"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Beziehen Sie Sozialleistungen zur Zahlung der Miete und/oder Kaution? <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="sozialleistungen" value="nein" checked onchange="toggleConditional('sozialleistungen_details', false)" required> Nein
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="sozialleistungen" value="ja" onchange="toggleConditional('sozialleistungen_details', true)"> Ja
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div id="sozialleistungen_details" class="conditional-field">
+                        <label>Falls ja, welche und in welchem Umfang? (z.B. Wohngeld, Sozialhilfe)</label>
+                        <textarea name="sozialleistungen_info"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Ist eine gewerbliche Nutzung des Zimmers beabsichtigt? <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="gewerblich" value="nein" checked onchange="toggleConditional('gewerblich_details', false)" required> Nein
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="gewerblich" value="ja" onchange="toggleConditional('gewerblich_details', true)"> Ja
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div id="gewerblich_details" class="conditional-field">
+                        <label>Falls ja, welcher Zweck?</label>
+                        <input type="text" name="gewerblich_zweck">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Beabsichtigen Sie, weitere Personen in die Wohnung aufzunehmen? <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="weitere_aufnehmen" value="nein" checked required> Nein
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="weitere_aufnehmen" value="ja"> Ja
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Spielen Sie Musikinstrumente? <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="musikinstrumente" value="nein" checked onchange="toggleConditional('musikinstrumente_details', false)" required> Nein
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="musikinstrumente" value="ja" onchange="toggleConditional('musikinstrumente_details', true)"> Ja
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div id="musikinstrumente_details" class="conditional-field">
+                        <label>Falls ja, welche?</label>
+                        <input type="text" name="musikinstrumente_welche">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Besitzen Sie Haustiere? <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="haustiere" value="nein" checked onchange="toggleConditional('haustiere_details', false)" required> Nein
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="haustiere" value="ja" onchange="toggleConditional('haustiere_details', true)"> Ja
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div id="haustiere_details" class="conditional-field">
+                        <label>Falls ja, welche?</label>
+                        <input type="text" name="haustiere_welche">
+                    </div>
+                </div>
+                
+                <!-- ABSCHNITT 7: Einverständniserklärungen -->
+                <div class="section">
+                    <h2 class="section-title">✍️ Einverständniserklärungen & Datenschutz</h2>
+                    
+                    <div class="consent-box">
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="leistungsfaehigkeit" required>
+                                <span>Ich erkläre, dass ich in der Lage bin, alle zu übernehmenden Verpflichtungen aus dem Mietvertrag, insbesondere die Erbringung der Mietkaution sowie der Miete plus Nebenkosten, zu leisten. <span class="required">*</span></span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="consent-box">
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="wahrheitsgemaess" required>
+                                <span>Ich erkläre, dass die vorgenannten Angaben vollständig und wahrheitsgemäß gemacht wurden. Bei Abschluss eines Mietvertrages können Falschangaben die Aufhebung oder fristlose Kündigung des Mietverhältnisses zur Folge haben. <span class="required">*</span></span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="consent-box">
+                        <p><strong>SCHUFA-Klausel zu Mietanträgen</strong></p>
+                        <div class="schufa-text">
+                            <p>Ich willige ein, dass die THASOS Verwaltungs- und Beteiligungs GmbH & Co. KG der SCHUFA Holding AG, Kormoranweg 5, 65201 Wiesbaden, Daten über die Beantragung dieses Mietvertrages übermittelt und Auskünfte über mich von der SCHUFA erhält.</p>
+                            
+                            <p>Unabhängig davon wird die THASOS Verwaltungs- und Beteiligungs GmbH & Co. KG der SCHUFA auch Daten über seine gegen mich bestehenden fälligen Forderungen übermitteln. Dies ist nach dem Bundesdatenschutzgesetz (§ 28a Absatz 1 Satz 1) zulässig, wenn ich die geschuldete Leistung trotz Fälligkeit nicht erbracht habe, die Übermittlung zur Wahrung berechtigter Interessen des Vermieters oder Dritter erforderlich ist und die Forderung vollstreckbar ist oder ich die Forderung ausdrücklich anerkannt habe.</p>
+                            
+                            <p>Die SCHUFA speichert und nutzt die erhaltenen Daten. Die erhaltenen Daten übermittelt sie an ihre Vertragspartner im Europäischen Wirtschaftsraum und der Schweiz, um diesen Informationen zur Beurteilung der Kreditwürdigkeit von natürlichen Personen zu geben.</p>
+                            
+                            <p>Weitere Informationen: www.meineschufa.de<br>
+                            Die postalische Adresse der SCHUFA lautet: SCHUFA Holding AG, Privatkunden ServiceCenter, Postfach 10 34 41, 50474 Köln</p>
+                        </div>
+                        
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="schufa_einwilligung" required>
+                                <span>Ich habe die SCHUFA-Klausel gelesen und willige in die Datenübermittlung ein. <span class="required">*</span></span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="consent-box">
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="datenschutz" required>
+                                <span>Ich bin damit einverstanden, dass meine Daten zum Zwecke der Vermietung verarbeitet werden. Kommt kein Mietvertrag zustande, werden die Daten unverzüglich vernichtet. <span class="required">*</span></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ABSCHNITT 8: Unterlagen-Upload -->
+                <div class="section">
+                    <h2 class="section-title">📎 Unterlagen hochladen</h2>
+                    
+                    <div class="form-group">
+                        <label>Ausweiskopie (Personalausweis oder Reisepass): <span class="required">*</span></label>
+                        <div class="file-upload" onclick="document.getElementById('ausweis').click()">
+                            <input type="file" id="ausweis" name="ausweis" accept=".pdf,.jpg,.jpeg,.png" required onchange="updateFileName('ausweis', 'ausweis_label')">
+                            <p id="ausweis_label">📄 Klicken Sie hier oder ziehen Sie eine Datei hierher<br><small>PDF, JPG oder PNG (max. 10 MB)</small></p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Gehaltsnachweise (letzte 3 Monate) oder Arbeitsvertrag: <span class="required">*</span></label>
+                        <div class="file-upload" onclick="document.getElementById('gehalt').click()">
+                            <input type="file" id="gehalt" name="gehalt" accept=".pdf,.jpg,.jpeg,.png" required multiple onchange="updateFileName('gehalt', 'gehalt_label')">
+                            <p id="gehalt_label">📄 Klicken Sie hier oder ziehen Sie Dateien hierher<br><small>PDF, JPG oder PNG (max. 10 MB pro Datei, mehrere Dateien möglich)</small></p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Weitere Dokumente (optional, z.B. SCHUFA-Selbstauskunft):</label>
+                        <div class="file-upload" onclick="document.getElementById('weitere').click()">
+                            <input type="file" id="weitere" name="weitere" accept=".pdf,.jpg,.jpeg,.png" multiple onchange="updateFileName('weitere', 'weitere_label')">
+                            <p id="weitere_label">📄 Klicken Sie hier oder ziehen Sie Dateien hierher<br><small>PDF, JPG oder PNG (max. 10 MB pro Datei, mehrere Dateien möglich)</small></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hidden Fields für FormSubmit -->
+                <input type="hidden" name="_subject" value="Neue Mieterselbstauskunft - WG Engadinerstr. 36">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="text" name="_honey" style="display:none">
+                
+                <button type="submit" class="submit-btn">Selbstauskunft absenden</button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        function toggleConditional(id, show) {
+            const element = document.getElementById(id);
+            if (show) {
+                element.classList.add('show');
+            } else {
+                element.classList.remove('show');
+            }
+        }
+        
+        function updateFileName(inputId, labelId) {
+            const input = document.getElementById(inputId);
+            const label = document.getElementById(labelId);
+            
+            if (input.files.length > 0) {
+                if (input.files.length === 1) {
+                    label.innerHTML = `✅ Datei ausgewählt: ${input.files[0].name}`;
+                } else {
+                    label.innerHTML = `✅ ${input.files.length} Dateien ausgewählt`;
+                }
+            }
+        }
+        
+        // Form validation
+        document.getElementById('mieterForm').addEventListener('submit', function(e) {
+            const requiredCheckboxes = document.querySelectorAll('input[type="checkbox"][required]');
+            let allChecked = true;
+            
+            requiredCheckboxes.forEach(checkbox => {
+                if (!checkbox.checked) {
+                    allChecked = false;
+                }
+            });
+            
+            if (!allChecked) {
+                e.preventDefault();
+                alert('Bitte bestätigen Sie alle erforderlichen Einverständniserklärungen.');
+                return false;
+            }
+        });
+    </script>
+</body>
+</html>

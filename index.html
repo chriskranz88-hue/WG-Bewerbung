@@ -223,8 +223,9 @@
         
         <div class="form-content">
             <div class="info-box">
-                <strong>ℹ️ Hinweis:</strong> Vielen Dank für Ihr Interesse! Bitte füllen Sie diese Selbstauskunft vollständig aus. 
-                Die Angaben sind freiwillig, jedoch ist uns die vollständige und wahrheitsgemäße Beantwortung wichtig für unsere Entscheidung.
+                <strong>ℹ️ Hinweis:</strong> Vielen Dank für Ihr Interesse! Bitte füllen Sie möglichst alle Felder dieser Selbstauskunft aus. 
+                <br><br>
+                <strong>Wichtig:</strong> Falls Sie einzelne Unterlagen (z.B. Gehaltsnachweise oder Ausweiskopie) nicht sofort zur Hand haben, können Sie diese auch nachreichen. Füllen Sie das Formular trotzdem vollständig aus und reichen Sie die fehlenden Dokumente per E-Mail nach.
                 <br><br>
                 <strong>Kontakt:</strong> chriskranz88@googlemail.com
             </div>
@@ -237,7 +238,7 @@
                     
                     <div class="form-group">
                         <label>Interessiert an Objekt: <span class="required">*</span></label>
-                        <input type="text" name="objekt" value="Engadinerstr. 36, München" required>
+                        <input type="text" name="objekt" placeholder="z.B. Engadinerstr. 36, München" required>
                     </div>
                     
                     <div class="form-group">
@@ -304,7 +305,7 @@
                     
                     <div class="form-group">
                         <label>Monatliches Nettoeinkommen (in Euro): <span class="required">*</span></label>
-                        <input type="number" name="nettoeinkommen" placeholder="2500" required>
+                        <input type="number" name="nettoeinkommen" placeholder="1000" required>
                     </div>
                     
                     <div class="form-group">
@@ -574,19 +575,23 @@
                 <div class="section">
                     <h2 class="section-title">📎 Unterlagen hochladen</h2>
                     
+                    <div class="info-box" style="margin-bottom: 20px;">
+                        <strong>💡 Tipp:</strong> Sie können die Unterlagen auch später per E-Mail an chriskranz88@googlemail.com nachreichen, falls Sie diese gerade nicht zur Hand haben.
+                    </div>
+                    
                     <div class="form-group">
-                        <label>Ausweiskopie (Personalausweis oder Reisepass): <span class="required">*</span></label>
+                        <label>Ausweiskopie (Personalausweis oder Reisepass):</label>
                         <div class="file-upload" onclick="document.getElementById('ausweis').click()">
-                            <input type="file" id="ausweis" name="ausweis" accept=".pdf,.jpg,.jpeg,.png" required onchange="updateFileName('ausweis', 'ausweis_label')">
-                            <p id="ausweis_label">📄 Klicken Sie hier oder ziehen Sie eine Datei hierher<br><small>PDF, JPG oder PNG (max. 10 MB)</small></p>
+                            <input type="file" id="ausweis" name="ausweis" accept=".pdf,.jpg,.jpeg,.png" onchange="updateFileName('ausweis', 'ausweis_label')">
+                            <p id="ausweis_label">📄 Klicken Sie hier oder ziehen Sie eine Datei hierher<br><small>PDF, JPG oder PNG (max. 10 MB) - Optional</small></p>
                         </div>
                     </div>
                     
                     <div class="form-group">
-                        <label>Gehaltsnachweise (letzte 3 Monate) oder Arbeitsvertrag: <span class="required">*</span></label>
+                        <label>Gehaltsnachweise (letzte 3 Monate) oder Arbeitsvertrag:</label>
                         <div class="file-upload" onclick="document.getElementById('gehalt').click()">
-                            <input type="file" id="gehalt" name="gehalt" accept=".pdf,.jpg,.jpeg,.png" required multiple onchange="updateFileName('gehalt', 'gehalt_label')">
-                            <p id="gehalt_label">📄 Klicken Sie hier oder ziehen Sie Dateien hierher<br><small>PDF, JPG oder PNG (max. 10 MB pro Datei, mehrere Dateien möglich)</small></p>
+                            <input type="file" id="gehalt" name="gehalt" accept=".pdf,.jpg,.jpeg,.png" multiple onchange="updateFileName('gehalt', 'gehalt_label')">
+                            <p id="gehalt_label">📄 Klicken Sie hier oder ziehen Sie Dateien hierher<br><small>PDF, JPG oder PNG (max. 10 MB pro Datei, mehrere Dateien möglich) - Optional</small></p>
                         </div>
                     </div>
                     
